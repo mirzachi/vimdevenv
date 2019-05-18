@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/root/test/build/lib",
+  "command": "/usr/bin/c++   -I/root/test/lib/include  -fPIC   -o CMakeFiles/mylib.dir/src/mylib.cpp.o -c /root/test/lib/src/mylib.cpp",
+  "file": "/root/test/lib/src/mylib.cpp"
+},
+{
+  "directory": "/root/test/build/app",
+  "command": "/usr/bin/c++   -I/root/test/lib/include  -fPIE   -o CMakeFiles/app.dir/src/main.cpp.o -c /root/test/app/src/main.cpp",
+  "file": "/root/test/app/src/main.cpp"
+}
+]
