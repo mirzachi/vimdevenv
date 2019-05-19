@@ -48,7 +48,7 @@ docker run -it vimdevenv:1.0
 ## How to clean all the previous containers
 
 ```bash
-docker ps -a | xargs docker container rm
+docker ps -a | awk 'NR>1 {print $1}' | xargs docker container rm
 ```
 
 
