@@ -18,7 +18,9 @@ WORKDIR /root
 ENV cmake_version "3.14.4"
 RUN wget https://github.com/Kitware/CMake/releases/download/v${cmake_version}/cmake-${cmake_version}.tar.gz
 RUN tar -xzf cmake-${cmake_version}.tar.gz
-RUN cd cmake-${cmake_version} && ./bootstrap && make install && rm -r cmake-*
+RUN cd cmake-${cmake_version} && \
+    ./bootstrap && make install && \
+    rm -r cmake-*
 
 # Install Vundle - vim plugin manager
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -33,7 +35,9 @@ COPY Example_Modern_CMake ./Example_Modern_CMake
 RUN vim -c 'PluginInstall' -c 'qa!'
 
 # There is a cmake issue with clang downloading in the next command, therefore a manual download is necessary
-RUN mkdir -p ~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives && cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives && wget https://dl.bintray.com/micbou/libclang/libclang-8.0.0-x86_64-unknown-linux-gnu.tar.bz2 
+RUN mkdir -p ~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives && \
+    cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives && \
+    wget https://dl.bintray.com/micbou/libclang/libclang-8.0.0-x86_64-unknown-linux-gnu.tar.bz2 
 
 # Compile and install YouCompleteMe 
 RUN cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clang-completer
