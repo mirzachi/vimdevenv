@@ -6,14 +6,13 @@ A Dockerfile recipe that builds a simple base development environment image that
 
 The image uses the latest [Ubuntu base image](https://hub.docker.com/_/ubuntu/) from the Docker registry. The built image comprises of the following development tools and packages:
 
-* build-essential
-* python-dev
-* python3-dev
-* git
-* wget
-* cmake 3.14
-* wget
-* vim 8
+* [build-essential](https://packages.ubuntu.com/bionic/build-essential)
+* [python-dev] (https://packages.ubuntu.com/bionic/python-dev)
+* [python3-dev](https://packages.ubuntu.com/bionic/python3-dev)
+* [git](https://packages.ubuntu.com/bionic/git)
+* [wget](https://packages.ubuntu.com/bionic/wget)
+* [cmake 3.14](https://blog.kitware.com/cmake-3-14-0-available-for-download)
+* [vim 8](https://packages.ubuntu.com/bionic/vim)
 
 Additionally, vim is extended with the following plugins:
 
@@ -28,5 +27,10 @@ Additionally, vim is extended with the following plugins:
 
 ## Build
 
-**TODO**
+### How to build the image
 
+Clone the repository:
+
+```bash
+git clone 
+```
