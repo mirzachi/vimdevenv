@@ -7,7 +7,7 @@ A Dockerfile recipe that builds a simple base development environment image that
 The image uses the latest [Ubuntu base image](https://hub.docker.com/_/ubuntu/) from the Docker registry. The built image comprises of the following development tools and packages:
 
 * [build-essential](https://packages.ubuntu.com/bionic/build-essential)
-* [python-dev] (https://packages.ubuntu.com/bionic/python-dev)
+* [python-dev](https://packages.ubuntu.com/bionic/python-dev)
 * [python3-dev](https://packages.ubuntu.com/bionic/python3-dev)
 * [git](https://packages.ubuntu.com/bionic/git)
 * [wget](https://packages.ubuntu.com/bionic/wget)
@@ -25,12 +25,34 @@ Additionally, vim is extended with the following plugins:
 * Installed Docker EE or CE
 * Internet connection
 
-## Build
-
-### How to build the image
+## How to build the image
 
 Clone the repository:
 
 ```bash
-git clone 
+git clone https://github.com/mirzachi/vimdevenv.git
 ```
+
+Build the image:
+
+```bash
+docker build -t vimdevenv:1.0 .
+```
+
+## How to run the image
+
+```bash
+docker run -it vimdevenv:1.0
+```
+
+## How to clean all the previous containers
+
+```bash
+docker ps -a | xargs docker container rm
+```
+
+
+
+
+
+
