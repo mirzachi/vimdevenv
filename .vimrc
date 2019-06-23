@@ -47,3 +47,10 @@ set encoding=utf-8
 
 " turn hybrid line numbers on
 set number relativenumber
+
+" clang-format integration
+let g:clang_format_path = '/usr/bin/clang-format'
+let g:clang_format_fallback_style = 'google'
+
+map <C-K> :py3file /usr/share/vim/addons/syntax/clang-format.py<cr>
+imap <C-K> <c-o>:py3file /usr/share/vim/addons/syntax/clang-format.py<cr>
