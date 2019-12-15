@@ -8,7 +8,7 @@ LABEL version="1.0" \
 
 # Install necessary dependencies and remove the apt cache since we do not need it later on
 RUN apt-get update && \
-    apt-get -y install build-essential vim git python-dev python3-dev wget clang-format && \
+    apt-get -y install build-essential vim git python-dev python3-dev wget clang-format doxygen graphviz && \
     rm -rf /var/lib/apt/lists/*
 
 # Set a working directory
