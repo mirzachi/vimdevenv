@@ -13,6 +13,8 @@ The image uses the latest [Ubuntu base image](https://hub.docker.com/_/ubuntu/) 
 * [wget](https://packages.ubuntu.com/bionic/wget)
 * [cmake 3.14](https://blog.kitware.com/cmake-3-14-0-available-for-download)
 * [vim 8](https://packages.ubuntu.com/bionic/vim)
+* [doxygen](http://www.doxygen.nl)
+* [graphviz](https://www.graphviz.org)
 
 Additionally, vim is extended with the following plugins:
 
