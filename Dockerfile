@@ -1,5 +1,5 @@
 # Use Ubuntu:latest image as a base image
-FROM ubuntu:latest
+FROM ubuntu:18.04
 
 # Add some metadata for inspection purposes
 LABEL version="1.0" \
@@ -37,7 +37,7 @@ RUN vim -c 'PluginInstall' -c 'qa!'
 # There is a cmake issue with clang downloading in the next command, therefore a manual download is necessary
 RUN mkdir -p ~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives && \
     cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives && \
-    wget https://dl.bintray.com/micbou/libclang/libclang-8.0.0-x86_64-unknown-linux-gnu.tar.bz2 
+    wget https://dl.bintray.com/micbou/libclang/libclang-9.0.0-x86_64-unknown-linux-gnu.tar.bz2 
 
 # Compile and install YouCompleteMe 
 RUN cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clang-completer
