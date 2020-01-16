@@ -54,3 +54,9 @@ let g:clang_format_fallback_style = 'google'
 
 map <C-K> :py3file /usr/share/vim/addons/syntax/clang-format.py<cr>
 imap <C-K> <c-o>:py3file /usr/share/vim/addons/syntax/clang-format.py<cr>
+
+" indent argument regulates the indent size
+" other part of the python script removes ugly new lines after formatting
+com! Fxml :%!python3 -c "import xml.dom.minidom, sys; print('\n'.join([line for line in xml.dom.minidom.parse(sys.stdin).toprettyxml(indent=' '*2).split('\n') if line.strip()]))"
+nnoremap = :Fxml<Cr>
+
