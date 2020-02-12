@@ -38,7 +38,7 @@ RUN vim -c 'PluginInstall' -c 'qa!'
 # There is a cmake issue with clang downloading in the next command, therefore a manual download is necessary
 RUN mkdir -p ~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives && \
     cd ~/.vim/bundle/YouCompleteMe/third_party/ycmd/clang_archives && \
-    wget https://dl.bintray.com/micbou/libclang/libclang-9.0.0-x86_64-unknown-linux-gnu.tar.bz2 
+    wget https://dl.bintray.com/ycm-core/libclang/libclang-9.0.0-x86_64-unknown-linux-gnu.tar.bz2 
 
 # Compile and install YouCompleteMe 
 RUN cd ~/.vim/bundle/YouCompleteMe && python3 install.py --clang-completer
