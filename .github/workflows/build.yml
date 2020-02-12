@@ -4,9 +4,9 @@ on: [push, pull_request]
 
 jobs: 
   build:
-    runs-on:ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
     - name: Docker build command
-      runs: docker build -t vimdevenv:1.0 .
+      run: docker build -t vimdevenv:1.0 .
         
