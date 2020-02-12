@@ -20,6 +20,7 @@ RUN wget https://github.com/Kitware/CMake/releases/download/v${cmake_version}/cm
 RUN tar -xzf cmake-${cmake_version}.tar.gz
 RUN cd cmake-${cmake_version} && \
     ./bootstrap && make install && \
+    cd .. && \
     rm -r cmake-*
 
 # Install Vundle - vim plugin manager
