@@ -27,7 +27,7 @@ RUN cd cmake-${cmake_version} && \
 RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Copy my .vimrc file to the image
-COPY vimrc ./.vimrc
+COPY .vimrc ./.vimrc
 
 # Copy an example C++ project built with CMake to the image
 COPY Example_Modern_CMake ./Example_Modern_CMake
