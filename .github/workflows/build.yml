@@ -9,7 +9,7 @@ jobs:
     - uses: actions/checkout@master
     - name: Build a Docker image and push it to docker.pkg.github.com
       run: |
-           VERSION=${date + %s}
+           VERSION=${date +%s}
            docker build -t docker.pkg.github.com/mirzachi/vimdevenv/vimdevenv:${VERSION} .
            docker login docker.pkg.github.com --username mirzachi --password ${{ secrets.GITHUB_TOKEN }}
            docker push docker.pkg.github.com/mirzachi/vimdevenv/vimdevenv:${VERSION}
